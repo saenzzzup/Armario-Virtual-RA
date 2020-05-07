@@ -74,7 +74,7 @@ namespace Lean.Gui
 			if (on == false)
 			{
 				on = true;
-
+				transform.SetAsLastSibling();
 				TurnOnNow();
 			}
 		}

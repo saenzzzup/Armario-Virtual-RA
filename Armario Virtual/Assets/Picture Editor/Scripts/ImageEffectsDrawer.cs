@@ -743,7 +743,7 @@ public class ImageEffect
         // Encode texture into PNG
         byte[] bytes = tex.EncodeToPNG();
         
-        File.WriteAllBytes(Application.dataPath + "/" + fileName +".png", bytes);
+        File.WriteAllBytes(Application.persistentDataPath + "/" + fileName +".png", bytes);
     }
 
 

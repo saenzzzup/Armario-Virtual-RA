@@ -56,6 +56,7 @@ public class ImageEffects : MonoBehaviour
     public void CancelToImage()
     {
         imageOne.sourceTex = null;
+        CameraBackground.snap = null;
         removeButton.SetActive(false);
         saveButton.SetActive(false);
         takeButton.SetActive(true);

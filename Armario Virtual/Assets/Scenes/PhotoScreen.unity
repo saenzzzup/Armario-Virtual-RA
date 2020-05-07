@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &31601340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 2074695792}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     Ease: 250
 --- !u!1 &216332180
 GameObject:
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -925,7 +925,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 390361414}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 0, g: 0, b: 0, a: 1}
     Ease: 250
 --- !u!1 &334918557
 GameObject:
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 31601339}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &366046837
 GameObject:
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &373244451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &390361415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 858273766}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &504032467
 GameObject:
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1951,7 +1951,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 1966745784}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &631846648
 GameObject:
@@ -2566,7 +2566,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 858273766}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &760446734
 GameObject:
@@ -2707,7 +2707,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1182139590}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 373244450}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     Ease: 250
 --- !u!1 &858273765
 GameObject:
@@ -2865,7 +2865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &858273767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3006,7 +3006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
-  loadToColor: {r: 0.2901961, g: 0.8117648, b: 1, a: 1}
+  loadToColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &871584412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,7 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 917830481}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
     Ease: 250
 --- !u!1 &884406495
 GameObject:
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3659,7 +3659,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &917830482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 31601339}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &1148249788
 GameObject:
@@ -4040,7 +4040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4054,7 +4054,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &1173624287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4529,7 +4529,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 2074695792}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 0, g: 0, b: 0, a: 1}
     Ease: 250
 --- !u!1 &1214145285
 GameObject:
@@ -4615,7 +4615,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 1966745784}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &1226489029
 GameObject:
@@ -4819,7 +4819,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 1499254867}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &1297453512
 GameObject:
@@ -4888,7 +4888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &1344835110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 1499254867}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &1413929693
 GameObject:
@@ -5188,7 +5188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5277,7 +5277,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 373244450}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 0, g: 0, b: 0, a: 1}
     Ease: 250
 --- !u!1 &1463850785
 GameObject:
@@ -5345,7 +5345,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 1344835109}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &1491320746
 GameObject:
@@ -5507,7 +5507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &1499254868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5634,7 +5634,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 390361414}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     Ease: 250
 --- !u!1 &1537599202
 GameObject:
@@ -5686,7 +5686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5904,7 +5904,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 917830481}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &1573826255
 GameObject:
@@ -6072,7 +6072,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 1173624286}
-    Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     Ease: 250
 --- !u!1 &1576016325
 GameObject:
@@ -6197,7 +6197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6304,7 +6304,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 1344835109}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &1677959340
 GameObject:
@@ -6956,7 +6956,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 1173624286}
-    Color: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     Ease: 250
 --- !u!1 &1959085410
 GameObject:
@@ -7008,7 +7008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7135,7 +7135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7149,7 +7149,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &1966745785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7418,7 +7418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7432,7 +7432,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.5
 --- !u!222 &2074695793
 CanvasRenderer:
   m_ObjectHideFlags: 0

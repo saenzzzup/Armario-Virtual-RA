@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ARTapToCreate
     - CameraBackground
+    - ClotheSelector
     - ImageEffects
     - Lean.Gui.LeanButton
     - Lean.Gui.LeanConstrainToParent
@@ -9,13 +11,21 @@ ScriptsOnlyBuild:
     - Lean.Gui.LeanMoveToTop
     - Lean.Gui.LeanOrientation
     - Lean.Gui.LeanSafeArea
+    - Lean.Gui.LeanWindow
+    - Lean.Transition.LeanTransition
+    - Lean.Transition.Method.LeanCanvasGroupAlpha
+    - Lean.Transition.Method.LeanCanvasGroupBlocksRaycasts
+    - Lean.Transition.Method.LeanCanvasGroupInteractable
     - Lean.Transition.Method.LeanGraphicColor
     - Lean.Transition.Method.LeanJoin
     - Lean.Transition.Method.LeanPlaySound
     - Lean.Transition.Method.LeanRectTransformAnchoredPositionY
     - Lean.Transition.Method.LeanTransformLocalScaleXY
+    - LoadTextures
     - SceneFade
+    - SelectClotheForModel
     - SelectCutout
+    - ShowFullImage
     - clotheLoader
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -25,6 +35,22 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
+    Unity.XR.ARFoundation.dll:
+    - UnityEngine.XR.ARFoundation.ARCameraBackground
+    - UnityEngine.XR.ARFoundation.ARCameraManager
+    - UnityEngine.XR.ARFoundation.ARInputManager
+    - UnityEngine.XR.ARFoundation.ARPlane
+    - UnityEngine.XR.ARFoundation.ARPlaneManager
+    - UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer
+    - UnityEngine.XR.ARFoundation.ARRaycastManager
+    - UnityEngine.XR.ARFoundation.ARSession
+    - UnityEngine.XR.ARFoundation.ARSessionOrigin
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -35,6 +61,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.SpatialTracking.dll:
+    - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -74,39 +102,69 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11504}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 11628}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 13212}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 12302}
+    - Class: 114
+      Script: {instanceID: 12320}
+    - Class: 114
+      Script: {instanceID: 12414}
+    - Class: 114
+      Script: {instanceID: 12464}
+    - Class: 114
+      Script: {instanceID: 12470}
+    - Class: 114
+      Script: {instanceID: 12776}
+    - Class: 114
+      Script: {instanceID: 12896}
+    - Class: 114
+      Script: {instanceID: 13050}
+    - Class: 114
+      Script: {instanceID: 13170}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13282}
+    - Class: 114
+      Script: {instanceID: 13382}
+    - Class: 114
+      Script: {instanceID: 13488}
+    - Class: 114
+      Script: {instanceID: 13614}
+    - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -122,6 +180,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/MainScreen.unity:
     - Class: 1
@@ -142,56 +202,82 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 11756}
+      Script: {instanceID: 11628}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11878}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13212}
+      Script: {instanceID: 12414}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 12470}
     - Class: 114
-      Script: {instanceID: 43486}
+      Script: {instanceID: 12776}
+    - Class: 114
+      Script: {instanceID: 12896}
+    - Class: 114
+      Script: {instanceID: 12914}
+    - Class: 114
+      Script: {instanceID: 13050}
+    - Class: 114
+      Script: {instanceID: 13170}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13382}
+    - Class: 114
+      Script: {instanceID: 13464}
+    - Class: 114
+      Script: {instanceID: 13488}
+    - Class: 114
+      Script: {instanceID: 13614}
+    - Class: 114
+      Script: {instanceID: 13656}
+    - Class: 114
+      Script: {instanceID: 13762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -207,6 +293,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/PhotoScreen.unity:
     - Class: 1
@@ -238,45 +326,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11756}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12508}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 13050}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 13248}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 13488}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 13762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -310,7 +398,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
@@ -319,32 +407,58 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11516}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 12044}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 11932}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 13072}
+      Script: {instanceID: 12258}
     - Class: 114
-      Script: {instanceID: 13172}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 12874}
+    - Class: 114
+      Script: {instanceID: 13050}
+    - Class: 114
+      Script: {instanceID: 13090}
+    - Class: 114
+      Script: {instanceID: 13106}
+    - Class: 114
+      Script: {instanceID: 13248}
+    - Class: 114
+      Script: {instanceID: 13274}
+    - Class: 114
+      Script: {instanceID: 13382}
+    - Class: 114
+      Script: {instanceID: 13482}
+    - Class: 114
+      Script: {instanceID: 13488}
+    - Class: 114
+      Script: {instanceID: 13614}
+    - Class: 114
+      Script: {instanceID: 13638}
+    - Class: 114
+      Script: {instanceID: 13762}
+    - Class: 114
+      Script: {instanceID: 72354}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -433,6 +547,12 @@ ScriptsOnlyBuild:
     className: LeanTransformPosition
   - hash:
       serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -493,6 +613,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 1b6fcd4b3b2f818e3f69d9ffa784d12f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClotheSelector
+  - hash:
+      serializedVersion: 2
       Hash: ff4ed0277d894331a213aecd8eebedee
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Gui
@@ -503,6 +629,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARRaycastManager
   - hash:
       serializedVersion: 2
       Hash: 3eec3d0f549eeeef6b133056a3e1f91a
@@ -529,6 +661,12 @@ ScriptsOnlyBuild:
     className: LeanGraphicColor
   - hash:
       serializedVersion: 2
+      Hash: 7803c8209c527ca4a465af349fda51bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowFullImage
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -551,6 +689,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 7f5c55cb7b3151ce240452eb85500d32
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlaneManager
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -587,6 +731,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARReferencePoint
+  - hash:
+      serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
   - hash:
       serializedVersion: 2
       Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
@@ -637,6 +793,12 @@ ScriptsOnlyBuild:
     className: LeanRectTransformOffsetMin
   - hash:
       serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -647,6 +809,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
     className: LeanInsert
+  - hash:
+      serializedVersion: 2
+      Hash: e8733e39efa851172df1c9eaef062265
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlane
   - hash:
       serializedVersion: 2
       Hash: cf326ce230964136ae1d36b9f43d1279
@@ -691,6 +859,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFace
+  - hash:
+      serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -715,6 +889,12 @@ ScriptsOnlyBuild:
     className: LeanHover
   - hash:
       serializedVersion: 2
+      Hash: 8f1e591808db709cb76cb7d85cb9a8d7
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: AREnvironmentProbeManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -725,6 +905,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Gui
     className: LeanButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPlaneMeshVisualizer
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -779,6 +965,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelectCutout
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloud
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -865,6 +1057,12 @@ ScriptsOnlyBuild:
     className: LeanAudioSourceVolume
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFaceMeshVisualizer
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -877,6 +1075,18 @@ ScriptsOnlyBuild:
     className: LeanMaterialColor
   - hash:
       serializedVersion: 2
+      Hash: 9f49cf6624b281b2129ce2be061d3664
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: clotheLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 982acebdb29318e47aa2d3c2cb7e1539
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedImageManager
+  - hash:
+      serializedVersion: 2
       Hash: 5bc47267618bc4d3eaef6e24b8fb6e18
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Gui
@@ -887,6 +1097,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
     className: LeanSpriteRendererColor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudParticleVisualizer
   - hash:
       serializedVersion: 2
       Hash: 1cd2028c8df28a22da8a16da06b4d21f
@@ -911,6 +1127,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 840e65a413cc46ebbbbf200f4362a70c
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARSession
   - hash:
       serializedVersion: 2
       Hash: 4c91c7234b655547806e71ce56e16d88
@@ -979,10 +1201,22 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: fcc7ae5ff1b0c9cad5865d5b6cee016a
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARReferencePointManager
+  - hash:
+      serializedVersion: 2
       Hash: 0eebd9a22412c21c53ca73fb383985d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Gui
     className: LeanTooltip
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARTrackedImage
   - hash:
       serializedVersion: 2
       Hash: 42bdfa9c19fa0e22d271f8494a697258
@@ -1021,16 +1255,40 @@ ScriptsOnlyBuild:
     className: LeanRectTransformSizeDelta
   - hash:
       serializedVersion: 2
+      Hash: 3e4e4fbe42765fe496c9a3bee4b21e65
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadTextures
+  - hash:
+      serializedVersion: 2
+      Hash: ca2a58dd7363525cbd2f65b2a150b41b
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARCameraManager
+  - hash:
+      serializedVersion: 2
       Hash: 09eae5a1a7bcd7ef91ee47e07752d772
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
     className: LeanRectTransformSetAsLastSibling
   - hash:
       serializedVersion: 2
+      Hash: d0976f085ee327327a35839ca3cb80f1
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARFaceManager
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 16dacd04869a876ea4bea0d1d2e77e34
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudManager
   - hash:
       serializedVersion: 2
       Hash: 82fa046aa9efa49c6a613713c447cc65
@@ -1057,10 +1315,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e1c35cdce946e9da77fe80a39c261608
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARSessionOrigin
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 0b234bba1d6456e14d4a970c75e3195c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectClotheForModel
   - hash:
       serializedVersion: 2
       Hash: 42bdfa9c19fa0e22d271f8494a697258
@@ -1081,6 +1351,12 @@ ScriptsOnlyBuild:
     className: LeanDelay
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARPointCloudMeshVisualizer
+  - hash:
+      serializedVersion: 2
       Hash: 82af3f7c59437e49d9ebf553b0920fff
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
@@ -1091,6 +1367,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
     className: LeanTransformLocalPosition
+  - hash:
+      serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1117,10 +1399,22 @@ ScriptsOnlyBuild:
     className: LeanMaterialFloat
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARInputManager
+  - hash:
+      serializedVersion: 2
       Hash: 347d9eba3db94d1d5e410224b37c9297
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneFade
+  - hash:
+      serializedVersion: 2
+      Hash: 1bc03a501323d00d0037a6b76d25a3ba
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARMeshManager
   - hash:
       serializedVersion: 2
       Hash: 3eec3d0f549eeeef6b133056a3e1f91a
@@ -1171,6 +1465,12 @@ ScriptsOnlyBuild:
     className: LeanShake
   - hash:
       serializedVersion: 2
+      Hash: 20d20168517d1c0e098918311aa95bbb
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: ARCameraBackground
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1213,6 +1513,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 01473135d671a71d740e507b04eb93da
+    assemblyName: Unity.XR.ARSubsystems.dll
+    namespaceName: UnityEngine.XR.ARSubsystems
+    className: XRReferenceImageLibrary
+  - hash:
+      serializedVersion: 2
       Hash: c67d6bd624f282436fb7f3261e1ac6ab
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Transition.Method
@@ -1223,6 +1529,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 290afc8da8e459e0b8dc7444bfaf5e35
+    assemblyName: Unity.XR.ARFoundation.dll
+    namespaceName: UnityEngine.XR.ARFoundation
+    className: AREnvironmentProbe
   - hash:
       serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
@@ -1303,14 +1615,14 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 76df8e20214a43bf5279bbf1fbda86c5
+      Hash: 8da208e74025e14f39e4d8658e4ed361
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: clotheLoader
+    className: ARTapToCreate
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScreen.unity
   - Assets/Scenes/CombineScreen.unity
   - Assets/Scenes/PhotoScreen.unity
   - Assets/Scenes/VRModelScreen.unity
-  playerPath: C:/Users/saeio/Documents/Proyectos Personales/Armario Virtual/armarioVR.apk
+  playerPath: C:/Users/saeio/Documents/Armario-Virtual-RA/Armario Virtual/armarioVR.apk
