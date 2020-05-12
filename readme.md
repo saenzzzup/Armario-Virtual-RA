@@ -7,7 +7,7 @@
 
 Armario Virtual, es una aplicación para la organización de la ropa, la idea detrás de ella es la cantidad de ropa con la que contamos en los armarios y pocas veces sabemos que es todo lo que tenemos debido a que normalmente solo vemos lo que se encuentra a plena vista y esto causa a que no usemos toda la ropa con la que contamos, igual la aplicación ayuda a hacer combinaciones de ropa y ver una previsualización de como se verían dichas combinaciones, así quitando la necesidad de sacar toda la ropa y probar una por una para saber que es lo que nos gustaría usar.
 
-![Pantalla](./Screenshots/1.png)
+![Pantalla](/Screnshots/1.jpg)
 
 ## Features!
 
@@ -15,20 +15,19 @@ La aplicación es la idea de un armario con capacidad de presentar la ropa con l
 
 - Pantalla de inicio
 
-![Pantalla de inicio](./Screenshots/2.png)
+![Pantalla de inicio](/Screnshots/2.jpg)
 
 - Captura y recorte de imágenes
 
-![Pantalla de fotos](./Screenshots/3.png)
-
+![Pantalla de fotos](/Screnshots/3.jpg)
 - Ropa en 2D
 
-![Pantalla de ropa 2D](./Screenshots/4.png)
+![Pantalla de ropa 2D](/Screnshots/4.jpg)
 
 - Modelos AR con texturas de ropa
 
-![Texturas de ropa](./Screenshots/5.png)
-![Texturas de ropa](./Screenshots/6.png)
+![Texturas de ropa](/Screnshots/5.jpg)
+![Texturas de ropa](/Screnshots/6.jpg)
 
 ## Tech
 
@@ -52,3 +51,5 @@ Solo descargar el repo y utilizar Unity 2019.3.1f1 o superior
 -	El celular debe contar con las funcionalidades que peritan el funcionamiento de ARCore.
 -	Se debe contar con una cámara en la parte posterior del celular.
 -	Debe de contar con un mínimo de 50mb libres de espacio.
+
+# [APK](./armarioVR.apk)
