@@ -8,6 +8,9 @@ using UnityEngine.XR.ARFoundation;
 public class ARTapToCreate : MonoBehaviour
 {
     public GameObject gameObjectToInstansiate;
+    public GameObject maleModel;
+    public GameObject femaleModel;
+    public UIManager uimanager;
 
     private GameObject gameObInsta;
     private ARRaycastManager _arRaycast;
@@ -39,11 +42,29 @@ public class ARTapToCreate : MonoBehaviour
             var hitPos = hits[0].pose;
             print(hitPos.position);
             if (gameObInsta == null) {
+                uimanager.m_TapToPlaceAnim.SetTrigger("FadeOff");
                 gameObInsta = Instantiate(gameObjectToInstansiate, hitPos.position, hitPos.rotation);
+                gameObInsta.transform.Rotate(0.0f, 180.0f, 0.0f, Space.World);
             } else {
                 gameObInsta.transform.position = hitPos.position;
             }
         }
         
+    }
+
+    public void ChangeToFemale() {
+        if (gameObInsta != null) {
+            var NewGameObInsta = Instantiate(femaleModel, gameObInsta.transform.position, gameObInsta.transform.rotation);
+            Destroy(gameObInsta);
+            gameObInsta = NewGameObInsta;
+        }
+    }
+
+    public void ChangeToMale() {
+        if (gameObInsta != null) {
+            var NewGameObInsta = Instantiate(maleModel, gameObInsta.transform.position, gameObInsta.transform.rotation);
+            Destroy(gameObInsta);
+            gameObInsta = NewGameObInsta;
+        }
     }
 }

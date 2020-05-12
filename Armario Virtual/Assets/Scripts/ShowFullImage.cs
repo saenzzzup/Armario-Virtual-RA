@@ -17,6 +17,12 @@ public class ShowFullImage : MonoBehaviour
         buttonCtrl.OnClick.AddListener(() => DeleteImage());
     }
 
+    public void CloseImage()
+    {
+        Lean.Gui.LeanButton buttonCtrl = GameObject.FindWithTag("delete button").GetComponent<Lean.Gui.LeanButton>();
+        buttonCtrl.OnClick.RemoveListener(() => DeleteImage());
+    }
+
     public void DeleteImage() {
         if ( File.Exists( imageUrl ) ) {
             File.Delete( imageUrl );

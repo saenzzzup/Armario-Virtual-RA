@@ -86,7 +86,17 @@ namespace Lean.Gui
 			{
 				on = false;
 
-				TurnOffNow();
+                try
+                {
+                    Lean.Gui.LeanButton buttonCtrl = GameObject.FindWithTag("delete button").GetComponent<Lean.Gui.LeanButton>();
+                    buttonCtrl.OnClick.RemoveAllListeners();
+                    buttonCtrl.OnClick.AddListener(() => TurnOff());
+                } catch
+                {
+
+                }
+
+                TurnOffNow();
 			}
 		}
 

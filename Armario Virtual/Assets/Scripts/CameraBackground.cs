@@ -9,7 +9,6 @@ public class CameraBackground : MonoBehaviour
     public static Renderer rendererBg;
     public static WebCamTexture _CamTex;
     public static Texture2D snap;
-    int _CaptureCounter = 0;
 
      void Start () 
      {
@@ -29,9 +28,6 @@ public class CameraBackground : MonoBehaviour
         snap = RotateImage(snap);
         snap.Apply();
         rendererBg.material.mainTexture = snap;
-        
-        // System.IO.File.WriteAllBytes(_SavePath + _CaptureCounter.ToString() + ".png", snap.EncodeToPNG());
-        // ++_CaptureCounter;
     }
 
     void Update()
